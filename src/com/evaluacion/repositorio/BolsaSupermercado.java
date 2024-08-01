@@ -35,7 +35,7 @@ public class BolsaSupermercado<T extends Producto> extends ProductoImplementacio
     public void imprimirProductos() {
         System.out.println("¿Qué tiene la bolsa de productos?");
         for (T producto : getProductos()) {
-            System.out.println("ID: " + producto.getProductoId() + ", Nombre: " + producto.getNombre() + ", Precio: " + producto.getPrecio() + ", " + producto.getDetalles());
+            System.out.println("ID: " + producto.getProductoId() + ", Nombre: " + producto.getNombre() + ", Precio: $" + producto.getPrecio() + ", " + producto.getDetalles());
         }
     }
 }
