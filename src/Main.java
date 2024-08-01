@@ -19,7 +19,8 @@ public class Main {
         bolsaFrutas.crear(new Fruta("Mango", 2.0, 0.6, "Amarillo"));
 
         //Mostrar productos de las bolsas
-        bolsaFrutas.getProductos();
+        bolsaFrutas.imprimirProductos();
+        System.out.println("=====Bolsa de frutas=====");
 
         //Demostración de CRUD
         System.out.println("=== Demostración de CRUD ===");
@@ -38,6 +39,6 @@ public class Main {
         System.out.println("==== Eliminando producto ====");
         bolsaFrutas.eliminar(2);
         System.out.println("=================================");
-        bolsaFrutas.getProductos();
+        bolsaFrutas.imprimirProductos();
     }
 }

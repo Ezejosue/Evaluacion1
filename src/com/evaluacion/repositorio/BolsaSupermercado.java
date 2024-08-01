@@ -3,6 +3,8 @@ package com.evaluacion.repositorio;
 import com.evaluacion.implementacion.ProductoImplementacion;
 import com.evaluacion.modelos.*;
 
+import java.util.List;
+
 
 public class BolsaSupermercado<T extends Producto> extends ProductoImplementacion<T> {
     private static final int MAX_PRODUCTOS = 5;
@@ -26,9 +28,13 @@ public class BolsaSupermercado<T extends Producto> extends ProductoImplementacio
         producto.setProductoId(id);
     }
 
-    public void getProductos() {
+    public List<T> getProductos() {
+        return listar();
+    }
+
+    public void imprimirProductos() {
         System.out.println("¿Qué tiene la bolsa de productos?");
-        for (T producto : listar()) {
+        for (T producto : getProductos()) {
             StringBuilder detalles = new StringBuilder();
             detalles.append("ID: ").append(producto.getProductoId()).append(", ");
             detalles.append("Nombre: ").append(producto.getNombre()).append(", ");
