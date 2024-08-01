@@ -27,4 +27,9 @@ public class NoPerecible extends Producto {
         this.calorias = calorias;
     }
 
+    @Override
+    public String getDetalles() {
+        return "Contenido: " + contenido + ", Calorias: " + calorias;
+    }
+
 }

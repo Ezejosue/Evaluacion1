@@ -25,4 +25,9 @@ public class Fruta extends Producto {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String getDetalles() {
+        return "Peso: " + peso + ", Color: " + color;
+    }
 }

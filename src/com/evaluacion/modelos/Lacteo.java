@@ -25,4 +25,9 @@ public class Lacteo extends Producto {
     public void setProteinas(int proteinas) {
         this.proteinas = proteinas;
     }
+
+    @Override
+    public String getDetalles() {
+        return "Cantidad: " + cantidad + ", Proteinas: " + proteinas;
+    }
 }

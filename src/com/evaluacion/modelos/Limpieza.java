@@ -26,4 +26,9 @@ public class Limpieza extends Producto {
         this.litros = litros;
     }
 
+    @Override
+    public String getDetalles() {
+        return "Componentes: " + componentes + ", Litros: " + litros;
+    }
+
 }

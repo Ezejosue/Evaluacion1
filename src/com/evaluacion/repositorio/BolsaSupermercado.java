@@ -35,26 +35,7 @@ public class BolsaSupermercado<T extends Producto> extends ProductoImplementacio
     public void imprimirProductos() {
         System.out.println("¿Qué tiene la bolsa de productos?");
         for (T producto : getProductos()) {
-            StringBuilder detalles = new StringBuilder();
-            detalles.append("ID: ").append(producto.getProductoId()).append(", ");
-            detalles.append("Nombre: ").append(producto.getNombre()).append(", ");
-            detalles.append("Precio: $").append(producto.getPrecio());
-
-            if (producto instanceof Fruta) {
-                detalles.append(", Peso: ").append(((Fruta) producto).getPeso());
-                detalles.append(", Color: ").append(((Fruta) producto).getColor());
-            } else if (producto instanceof Limpieza) {
-                detalles.append(", Componente: ").append(((Limpieza) producto).getComponentes());
-                detalles.append(", Litros: ").append(((Limpieza) producto).getLitros());
-            } else if (producto instanceof Lacteo) {
-                detalles.append(", Cantidad: ").append(((Lacteo) producto).getCantidad());
-                detalles.append(", Proteínas: ").append(((Lacteo) producto).getProteinas());
-            } else if (producto instanceof NoPerecible) {
-                detalles.append(", Contenido: ").append(((NoPerecible) producto).getContenido());
-                detalles.append(", Calorías: ").append(((NoPerecible) producto).getCalorias());
-            }
-
-            System.out.println(detalles.toString());
+            System.out.println("ID: " + producto.getProductoId() + ", Nombre: " + producto.getNombre() + ", Precio: " + producto.getPrecio() + ", " + producto.getDetalles());
         }
     }
 }

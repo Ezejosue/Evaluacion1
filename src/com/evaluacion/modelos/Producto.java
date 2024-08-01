@@ -1,6 +1,6 @@
 package com.evaluacion.modelos;
 
-public class Producto {
+public abstract class Producto {
     private Integer productoId;
     private String nombre;
     private Double precio;
@@ -33,5 +33,7 @@ public class Producto {
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
+
+    public abstract String getDetalles();
 
 }
